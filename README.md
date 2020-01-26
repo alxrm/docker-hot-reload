@@ -4,7 +4,7 @@ Yoba-boba hot-reload(auto sync) util
 ## Usage
 
 ```sh
-$ python3 hot_reload.py /absolute/local/root --remote /root --container some-container-name
+$ python3 yobareload.py /absolute/local/root --remote /root --container some-container-name
 ```
 
 It's using `docker cp` to update files in the container.
