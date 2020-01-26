@@ -7,7 +7,11 @@ Yoba-boba hot-reload(auto sync) util
 $ python3 yobareload.py /absolute/local/root --remote /root --container some-container-name
 ```
 
-It's using `docker cp` to update files in the container.
+`-c/--container` — docker container name or id
+
+`-r/--remote` — remote root directory
+
+It's using [docker cp](https://docs.docker.com/engine/reference/commandline/cp/) to update files in the container.
 
 ## Roots
 Please note that local root should have the same path segment as the remote root's first one.
