@@ -1,0 +1,25 @@
+# docker-hot-reload
+Yoba-boba hot-reload(auto sync) util
+
+## Usage
+
+```sh
+$ python3 hot_reload.py /absolute/local/root --remote /root --container some-container-name
+```
+
+It's using `docker cp` to update files in the container.
+
+## Roots
+Please note that local root should have the same path segment as the remote root's first one.
+
+**Correct**
+
+local root is `/Users/me/app/static` remote root is `/static`
+
+**Wrong**
+
+local root is `/Users/me/app/scripts/styles` remote root is `/app/styles`
+
+**Correct**
+
+local root is `/Users/me/app/scripts/styles` remote root is `/scripts/styles`
