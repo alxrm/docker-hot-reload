@@ -46,8 +46,8 @@ def sync_with_docker(local, remote, container, path):
     remote_path = path[start_index:]
 
     print('Updating: {}'.format(path))
-    print(['docker', 'cp', path, '{}:{}'.format(container, remote_path)])
-    # call(['docker', 'cp', path, '{}:{}'.format(container, remote_path)])
+    # print(['docker', 'cp', path, '{}:{}'.format(container, remote_path)])
+    call(['docker', 'cp', path, '{}:{}'.format(container, remote_path)])
 
 
 parser = argparse.ArgumentParser(description='Auto-sync files from given root with docker container remote directory')
